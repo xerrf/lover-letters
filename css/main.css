@@ -1,0 +1,87 @@
+
+/*  */
+
+header {
+    grid-area: title;
+    text-align: center;
+}
+
+
+div.linkWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 7em;
+    background-color: black;
+    color: white;
+    /* padding-top: 3em; */
+    border-radius: 0px;
+    transition: border-radius 0.5s;
+}
+
+div.linkWrapper:hover {
+    border-radius: 100px;
+    transition: border-radius 0.5s;
+    cursor: pointer;
+}
+
+div.linkWrapper:hover a {
+    color: blue;
+    border-bottom: 3px yellow dotted;
+}
+
+div.box h3 {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* GRID */
+
+
+main {
+    grid-area: block;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+x1 {
+    grid-area: pL;
+}
+
+x2 {
+    grid-area: pR;
+}
+
+x3 {
+    grid-area: pT;
+}
+
+body {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto;
+    grid-row-gap: 2em;
+    grid-template-areas:
+    'pL pT pR'
+    'pL title pR'
+    'pL block pR';
+}
