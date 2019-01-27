@@ -17,20 +17,25 @@ div.linkWrapper {
     height: 7em;
     background-color: black;
     color: white;
-    /* padding-top: 3em; */
     border-radius: 0px;
     transition: border-radius 0.5s;
+    box-sizing: border-box;
 }
 
 div.linkWrapper:hover {
-    border-radius: 100px;
-    transition: border-radius 0.5s;
     cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: thick black solid;
+    background-color: white;
+    transition: border-radius border 0.5s
+    
 }
 
 div.linkWrapper:hover a {
-    color: blue;
-    border-bottom: 3px yellow dotted;
+    color: black;
+    border-bottom: 3px grey dotted;
+    padding-bottom: 0.25em;
 }
 
 div.box h3 {
@@ -47,6 +52,11 @@ a:active {
     text-decoration: none;
 }
 
+p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80%;
+}
 
 
 
