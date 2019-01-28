@@ -26,7 +26,7 @@ h1 {
     font-size: 90%;
     font-weight: normal;
     padding: 2px;
-    margin: 0px;
+    margin: 0px 5px;
 }
 
 aside {
@@ -49,7 +49,8 @@ main {
 
 h2 {
     color: #2162EB;
-    font-size: 90%;
+    font-size: 80%;
+    font-weight: normal;
 }
 
 span.green {
@@ -61,12 +62,21 @@ span.yellow, p {
 }
 
 p {
-    font-size: 90%;
+    font-size: 80%;
 }
 
 p span {
     color: cyan;
 }
+
+a, a:active {
+    color: lightcoral;
+}
+
+a:hover {
+    color: cyan;
+}
+
 
 /* GRIDS */
 
@@ -95,7 +105,7 @@ x3 {
 body {
     display: grid;
     grid-template-columns: 1fr 10fr 3fr;
-    grid-template-rows: 5px auto;
+    grid-template-rows: 18px auto;
     grid-template-areas: 
     'pT pT pT'
     'pL cmd pR';
