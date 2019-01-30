@@ -45,16 +45,13 @@ main {
     grid-area: main;
     background-color: black;
     opacity: 0.95;
+    height: 30em;
 }
 
 h2 {
     color: #2162EB;
     font-size: 80%;
     font-weight: normal;
-}
-
-span.green {
-    color: #22FF12;
 }
 
 span.yellow, p {
@@ -65,8 +62,12 @@ p {
     font-size: 80%;
 }
 
-p span {
+p span.h {
     color: cyan;
+}
+
+span.green {
+    color: #22FF12;
 }
 
 a, a:active {
