@@ -6,11 +6,56 @@
 
 header {
     grid-area: head;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: thin solid #dddddd;
+    border-top: none;
+}
+
+p {
+    font-size: 90%;
+}
+
+header p {
+    background-image: url(../img/file.PNG);
+    background-repeat: no-repeat;
+    background-size: 2% auto;
+    background-position: 1% 50%;
+    padding: 0.5em 0em;
+    margin: 0em;
+}
+
+p>a, p>a:active {
+    grid-area: link;
+    margin-left: 2.5em;
+    color: #0379df;
+    text-decoration: none;
+}
+
+p>a:hover {
+    text-decoration: underline;
+}
+
+p>.comment {
+    grid-area: comm;
+    color: grey;
+}
+
+p>.comment:hover {
+    color: #0379df;
+    text-decoration: underline;
+}
+
+p>.time {
+    grid-area: time;
+    text-align: right;
+    margin-right: 1em;
+    color: grey;
 }
 
 main {
     grid-area: body;
-    border-radius: 5px;
+    border-radius: 7px;
     border: solid thin #dddddd;
 }
 
@@ -22,26 +67,32 @@ h1 {
 }
 
 h2{
-    height: 40px;
-    background-color: lightgrey;
-    border-bottom: #dddddd;
+    height: 35px;
+    background-color: #f6f8fa;
+    border-bottom: thin solid #dddddd;
     margin: 0em;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    font-size: 100%;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    font-size: 0.9em;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-image: url(../img/readme.png);
+    background-repeat: no-repeat;
+    background-size: 2% auto;
+    background-position: 1% 50%;
 }
 
 h2 span {
-    transform: translateX(2em);
+    transform: translateX(2.4em);
     
 }
 
-p {
-    margin: 0.5em 5%;
+main p {
+    margin: 0.75em 5%;
+    color: #222222;
+    line-height: 1.5em;
 }
 
 #x1 {
@@ -58,12 +109,20 @@ p {
 
 /* GRID */
 
+header p {
+    border-top: thin solid #dddddd;
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'link comm time';
+}
+
 body {
     display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    grid-template-rows: 50px 40px auto;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 0.5em;
     grid-template-areas: 
-    'pL pT pR'
     'pL head pR'
     'pL body pR';
 }
